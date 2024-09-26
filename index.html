@@ -1,1 +1,351 @@
-Hello World!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Projects</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #1c1e21;
+            color: #f0f0f0;
+            animation: fadeIn 1s ease-out;
+        }
+        .header {
+            text-align: center;
+            padding: 5px 0;
+            background-color: #333;
+            color: white;
+            animation: fadeIn 1.5s ease-out;
+        }
+        .header h1 {
+            font-size: 3rem;
+            font-weight: 600;
+        }
+        .header p {
+            font-size: 1.25rem;
+            color: #bbbbbb;
+        }
+        .category-card {
+            background-color: #444;
+            color: #f0f0f0;
+            border: none;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+        .project-card {
+            background-color: #2b2d31;
+            color: #f0f0f0;
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            animation: fadeIn 1.5s ease-out;
+            height: 350px;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+        .project-card img {
+            border-radius: 12px 12px 0 0;
+            height: 50%;
+            width: 100%;
+        }
+        .card-body h5 {
+            font-weight: 600;
+            font-size: 1.5rem;
+        }
+        .card-body p {
+            color: #b8b8b8;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+        .footer p {
+            margin: 0;
+            color: #bbbbbb;
+        }
+        .container {
+            padding-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>My Projects</h1>
+        <p>Explore the projects I have been working on!</p>
+    </div>
+
+    <!-- Categories Section -->
+    <div class="container">
+        <h2 class="text-center my-5">Categories</h2>
+        <div class="row">
+            <!-- Category 1 -->
+            <div class="col-md-4">
+                <div class="category-card">
+                    <h3>Games</h3>
+                    <p>Projects that involve creating interactive games.</p>
+                    <a href="#games" class="btn btn-custom">View Projects</a>
+                </div>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="col-md-4">
+                <div class="category-card">
+                    <h3>Web Apps</h3>
+                    <p>Web apps that utilize modern technologies and APIs.</p>
+                    <a href="#web-apps" class="btn btn-custom">View Projects</a>
+                </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="col-md-4">
+                <div class="category-card">
+                    <h3>Mobile Apps</h3>
+                    <p>Projects designed for mobile platforms.</p>
+                    <a href="#mobile-apps" class="btn btn-custom">View Projects</a>
+                </div>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="col-md-4">
+                <div class="category-card">
+                    <h3>Other</h3>
+                    <p>Other projects such as automation or experimentation.</p>
+                    <a href="#others" class="btn btn-custom">View Projects</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div class="container">
+        <h2 id="games" class="text-center my-5">Games</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="images/nightmare-fighter.png" class="card-img-top" alt="Nightmare Fighter">
+                    <div class="card-body">
+                        <h5 class="card-title">Nightmare Fighter</h5>
+                        <p class="card-text">A 3D "tower" self defense game made with Unity during the Microsoft Hackathon 2024.</p>
+                        <a href="https://nightmarefighter.azurewebsites.net" target="_blank" class="btn btn-custom">Play on Web</a>
+                        <a href="https://github.com/DPigeon/My-Portfolio/blob/master/Nightmare-Fighter.md" target="_blank" class="btn btn-custom">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="images/stacker.png" class="card-img-top" alt="Stacker">
+                    <div class="card-body">
+                        <h5 class="card-title">Stacker</h5>
+                        <p class="card-text">A ESP32 WROOM32 arcade game based on Stacker retro game.</p>
+                        <a href="https://www.youtube.com/watch?v=SjYPV-ttLqc" target="_blank" class="btn btn-custom">View Video</a>
+                        <a href="https://github.com/DPigeon/Stacker" target="_blank" class="btn btn-custom">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="images/swiss-army-swords.png" class="card-img-top" alt="Swiss Army Swords">
+                    <div class="card-body">
+                        <h5 class="card-title">Swiss Army Swords</h5>
+                        <p class="card-text">A 2D platformer side scroll adventure game made with Unity.</p>
+                        <a href="https://dpigeon.github.io/swiss-army-swords/" target="_blank" class="btn btn-custom">Play on Web</a>
+                        <a href="https://github.com/DPigeon/Swiss-Army-Swords" target="_blank" class="btn btn-custom">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="images/golden-sea.png" class="card-img-top" alt="Golden Sea">
+                    <div class="card-body">
+                        <h5 class="card-title">Golden Sea</h5>
+                        <p class="card-text">A variation of <a href="https://github.com/DPigeon/Golden-Sea">Oxygen Fight</a> that I made before: 3D game made with Unity.</p>
+                        <a href="https://dpigeon.github.io/golden-sea/" target="_blank" class="btn btn-custom">Play on Web</a>
+                        <a href="https://github.com/DPigeon/Golden-Sea" target="_blank" class="btn btn-custom">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="images/oxygen-fight.png" class="card-img-top" alt="Oxygen Fight">
+                    <div class="card-body">
+                        <h5 class="card-title">Oxygen Fight</h5>
+                        <p class="card-text">A variation of Balloon Fight: 2D game made with Unity.</p>
+                        <a href="https://dpigeon.github.io/oxygen-fight/" target="_blank" class="btn btn-custom">Play on Web</a>
+                        <a href="https://github.com/DPigeon/Oxygen-Fight" target="_blank" class="btn btn-custom">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="web-apps" class="text-center my-5">Web Apps</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="images/money-tree.png" class="card-img-top" alt="MoneyTree">
+                    <div class="card-body">
+                        <h5 class="card-title">MoneyTree</h5>
+                        <p class="card-text">An Angular & Java web application that encourage good investing practices.</p>
+                        <a href="https://github.com/DPigeon/Money-Tree/wiki" target="_blank" class="btn btn-custom">View Info</a>
+                        <a href="https://github.com/DPigeon/Money-Tree" target="_blank" class="btn btn-custom">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="images/edge.png" class="card-img-top" alt="Edge">
+                    <div class="card-body">
+                        <h5 class="card-title">Edge</h5>
+                        <p class="card-text">A React.js social media web application that allows parents to communicate with teachers.</p>
+                        <a href="https://github.com/DPigeon/My-Portfolio/blob/master/Edge-Web-Application.md" target="_blank" class="btn btn-custom">View Info</a>
+                        <a href="https://github.com/DPigeon/Edge" target="_blank" class="btn btn-custom">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="images/wikiuno.png" class="card-img-top" alt="Wikiuno">
+                    <div class="card-body">
+                        <h5 class="card-title">Wikiuno</h5>
+                        <p class="card-text">A React.js web application created during ConUHacks IV Hackathon that allows you to see your Arduino outputs.</p>
+                        <a href="https://github.com/DPigeon/Wikiuno/wiki" target="_blank" class="btn btn-custom">View Info</a>
+                        <a href="https://github.com/DPigeon/Wikiuno" target="_blank" class="btn btn-custom">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 id="mobile-apps" class="text-center my-5">Mobile Apps</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="images/see-text.png" class="card-img-top" alt="SeeText">
+                    <div class="card-body">
+                        <h5 class="card-title">SeeText</h5>
+                        <p class="card-text">An Android application that shows you what you say & detects different objects in different languages.</p>
+                        <a href="https://github.com/DPigeon/My-Portfolio/blob/master/SeeText.md" target="_blank" class="btn btn-custom">View Info</a>
+                        <a href="https://github.com/DPigeon/SeeText" target="_blank" class="btn btn-custom">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="images/uvxpo.png" class="card-img-top" alt="UVXpo">
+                    <div class="card-body">
+                        <h5 class="card-title">UVXpo</h5>
+                        <p class="card-text">An Android application that is used to track your UV exposure throughout the day.</p>
+                        <a href="https://github.com/DPigeon/My-Portfolio/blob/master/Edge-Web-Application.md" target="_blank" class="btn btn-custom">View Info</a>
+                        <a href="https://github.com/DPigeon/UVXpo" target="_blank" class="btn btn-custom">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="images/headwarn.png" class="card-img-top" alt="HeadWarn">
+                    <div class="card-body">
+                        <h5 class="card-title">HeadWarn</h5>
+                        <p class="card-text">A mobile app built during ImplementAI 2019 that analyzes if you are tired, drunk or high before driving.</p>
+                        <a href="https://github.com/DPigeon/HeadWarn/wiki/Demo" target="_blank" class="btn btn-custom">View Info</a>
+                        <a href="https://github.com/DPigeon/HeadWarn" target="_blank" class="btn btn-custom">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="images/xetha.png" class="card-img-top" alt="Xetha">
+                    <div class="card-body">
+                        <h5 class="card-title">Xetha</h5>
+                        <p class="card-text">React-Native mobile game application created to solve fun and interactive puzzles.</p>
+                        <a href="https://github.com/DPigeon/My-Portfolio/blob/master/Xetha-Game-Mobile-Application.md" target="_blank" class="btn btn-custom">View Info</a>
+                        <a href="https://github.com/DPigeon/Xetha" target="_blank" class="btn btn-custom">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="others" class="text-center my-5">Others</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="images/smash-remix.jpg" class="card-img-top" alt="SmashRemix">
+                    <div class="card-body">
+                        <h5 class="card-title">SmashRemix Automation</h5>
+                        <p class="card-text">Proposed improvements to the <a href="https://github.com/JSsixtyfour/smashremix">Smash Remix Community</a> using GitHub Actions and shell scripts.</p>
+                        <a href="https://github.com/DPigeon/smashremix/pull/1" target="_blank" class="btn btn-custom">Scripts Enhancement</a>
+                        <a href="https://github.com/DPigeon/smashremix/pull/2" target="_blank" class="btn btn-custom">Release Process</a>
+                    </div>
+                </div>
+            </div>
+
+        <div class="col-md-4">
+            <div class="card project-card">
+                <img src="images/area51.png" class="card-img-top" alt="Area51">
+                <div class="card-body">
+                    <h5 class="card-title">Area51</h5>
+                    <p class="card-text">A rollercoaster simulation in space created to experiment with OpenGL stack.</p>
+                    <a href="https://github.com/DPigeon/Area51/wiki" target="_blank" class="btn btn-custom">View Info</a>
+                    <a href="https://github.com/DPigeon/Area51" target="_blank" class="btn btn-custom">View Project</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 My Projects | <a href="https://github.com/DPigeon/" target="_blank">DPigeon</a></p>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
