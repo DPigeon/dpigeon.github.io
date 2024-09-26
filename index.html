@@ -27,7 +27,7 @@
         }
         .header {
             text-align: center;
-            padding: 5px 0;
+            padding: 0px 0;
             background-color: #333;
             color: white;
             animation: fadeIn 1.5s ease-out;
@@ -110,7 +110,7 @@
     <!-- Header Section -->
     <div class="header">
         <h1>My Projects</h1>
-        <p>Explore the projects I have been working on!</p>
+        <p>Explore the projects I have been working on.</p>
     </div>
 
     <!-- Categories Section -->
@@ -118,7 +118,7 @@
         <h2 class="text-center my-5">Categories</h2>
         <div class="row">
             <!-- Category 1 -->
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="category-card">
                     <h3>Games</h3>
                     <p>Projects that involve creating interactive games.</p>
@@ -127,7 +127,7 @@
             </div>
 
             <!-- Category 2 -->
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="category-card">
                     <h3>Web Apps</h3>
                     <p>Web apps that utilize modern technologies and APIs.</p>
@@ -136,7 +136,7 @@
             </div>
 
             <!-- Category 3 -->
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="category-card">
                     <h3>Mobile Apps</h3>
                     <p>Projects designed for mobile platforms.</p>
@@ -145,7 +145,7 @@
             </div>
 
             <!-- Category 4 -->
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="category-card">
                     <h3>Other</h3>
                     <p>Other projects such as automation or experimentation.</p>
@@ -218,6 +218,23 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="images/hetha.png" class="card-img-top" alt="Hetha">
+                    <div class="card-body">
+                        <h5 class="card-title">Hetha</h5>
+                        <p class="card-text">A small and simple Arduino game where the goal is to escape and survive.</p>
+                        <a href="https://github.com/DPigeon/Hetha/blob/master/README.md" target="_blank" class="btn btn-custom">View Info</a>
+                        <a href="https://github.com/DPigeon/Hetha" target="_blank" class="btn btn-custom">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="back-to-top">
+                <a href="#top" class="btn btn-custom">Back to Top</a>
+            </div>
+
         </div>
 
         <h2 id="web-apps" class="text-center my-5">Web Apps</h2>
@@ -248,6 +265,17 @@
 
             <div class="col-md-4">
                 <div class="card project-card">
+                    <img src="images/survive-highscores.png" class="card-img-top" alt="Survive Highscores">
+                    <div class="card-body">
+                        <h5 class="card-title">Survive's Highscores</h5>
+                        <p class="card-text">A React.js highscores page integrated to work with my friend's game Survive.</p>
+                        <a href="https://github.com/DPigeon/My-Portfolio/blob/master/Survive-Game-Highscores-Application.md" target="_blank" class="btn btn-custom">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card project-card">
                     <img src="images/wikiuno.png" class="card-img-top" alt="Wikiuno">
                     <div class="card-body">
                         <h5 class="card-title">Wikiuno</h5>
@@ -256,6 +284,10 @@
                         <a href="https://github.com/DPigeon/Wikiuno" target="_blank" class="btn btn-custom">View Project</a>
                     </div>
                 </div>
+            </div>
+
+            <div class="back-to-top">
+                <a href="#top" class="btn btn-custom">Back to Top</a>
             </div>
 
         </div>
@@ -309,6 +341,11 @@
                     </div>
                 </div>
             </div>
+
+            <div class="back-to-top">
+                <a href="#top" class="btn btn-custom">Back to Top</a>
+            </div>
+
         </div>
 
         <h2 id="others" class="text-center my-5">Others</h2>
@@ -325,6 +362,30 @@
                 </div>
             </div>
 
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="images/nlp-language-classifier.png" class="card-img-top" alt="NLP Language Classifier">
+                    <div class="card-body">
+                        <h5 class="card-title">NLP Language Classifier</h5>
+                        <p class="card-text">A Naive Bayes classification for NLP to determine the most likely language of a tweet.</p>
+                        <a href="https://github.com/DPigeon/NLP-Language-Classifier/blob/master/README.md" target="_blank" class="btn btn-custom">View Info</a>
+                        <a href="https://github.com/DPigeon/NLP-Language-Classifier" target="_blank" class="btn btn-custom">View Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card project-card">
+                    <img src="images/heuristic-indonesian-dot-puzzle.png" class="card-img-top" alt="Heuristic Indonesian Dot Puzzle">
+                    <div class="card-body">
+                        <h5 class="card-title">Heuristic Indonesian Dot Puzzle</h5>
+                        <p class="card-text">Finds the optimal solution path with DFS, BFS and A* Algorithm in an indonesian dot puzzle.</p>
+                        <a href="https://github.com/DPigeon/Heuristic-Indonesian-Puzzle/blob/master/README.md" target="_blank" class="btn btn-custom">View Info</a>
+                        <a href="https://github.com/DPigeon/Heuristic-Indonesian-Puzzle" target="_blank" class="btn btn-custom">View Project</a>
+                    </div>
+                </div>
+            </div>
+
         <div class="col-md-4">
             <div class="card project-card">
                 <img src="images/area51.png" class="card-img-top" alt="Area51">
@@ -337,6 +398,12 @@
             </div>
         </div>
 
+        <div class="back-to-top">
+            <a href="#top" class="btn btn-custom">Back to Top</a>
+        </div>
+
+        <br>
+        <br>
     </div>
 
     <!-- Footer Section -->
