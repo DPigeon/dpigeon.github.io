@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Highscores</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+  <h1>Highscores</h1>
+
+  <!-- Filter Buttons with Icons and Text Labels -->
+  <div id="filter-container">
+    <button class="filter-button active" data-category="nights" title="Nights">
+      <img src="../../images/night.png" alt="Nights">
+      <span>Nights</span>
+    </button>
+    <button class="filter-button" data-category="kills" title="Kills">
+      <img src="../../images/kills.png" alt="Kills">
+      <span>Kills</span>
+    </button>
+    <button class="filter-button" data-category="fragments" title="Fragments">
+      <img src="../../images/fragments.png" alt="Fragments">
+      <span>Fragments</span>
+    </button>
+  </div>
+
+  <!-- Highscores Table -->
+  <table id="highscores-table">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th id="category-header">Nights</th>
+      </tr>
+    </thead>
+    <!-- Elements are added below here -->
+  </table>
+
+  <footer>
+    <p>
+      <a href="https://www.flaticon.com/free-icons/dark" title="dark icons">Dark moon icon created by adriansyah - Flaticon</a>
+    </p>
+    Designed for Nightmare Fighter Game | <a href="https://github.com/DPigeon">DPigeon</a>
+    
+  </footer>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+    import { getDatabase, ref, query, onValue, orderByChild, limitToFirst } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-database.js";
+
+    const table = document.getElementById('highscores-table');
+    const categoryHeader = document.getElementById('category-header');
+    const filterButtons = document.querySelectorAll('.filter-button');
+
+    const categories = {
+        nights: 'Nights',
+        kills: 'Kills',
+        fragments: 'Fragments'
+    };
+    const topLimit = 25;
+
+    window.addEventListener('load', function() {
+        const firebaseConfig = {
+          databaseURL: "https://nightmare-fighter-default-rtdb.firebaseio.com/"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        let keyCategories = Object.keys(categories);
+        let content = '<tbody>';
+        for (let k = 0; k < keyCategories.length; k++) {
+          onValue(query(ref(db, 'users/'), orderByChild(keyCategories[k]), limitToFirst(topLimit)), function(snapshot) {
+              if (snapshot.exists()) {
+                var index = 0;
+                snapshot.forEach(function(data) {
+                  var i = index + 1;
+                  let score = keyCategories[k] === "nights" ? data.val().nights :
+                              keyCategories[k] === "kills" ? data.val().kills : 
+                              keyCategories[k] === "fragments" ? data.val().fragments : 0;
+                  score = -1 * score // Firebase does not allow to order in descending order, so we order by negatives
+                  var defaultStyle = keyCategories[k] === "nights" ? '' : 'style="display: none;"'
+
+                  index++;
+                  content += `<tr data-category="${keyCategories[k]}" data-score="${score}" ${defaultStyle}>`;
+                  content += '<td>' + i + '</td>';
+                  content += '<td>' + data.key + '</td>';
+                  content += '<td>' + score + '</td>';
+                  content += '</tr>';
+                });
+                if (k == keyCategories.length - 1) {
+                  $('#highscores-table').append(content);
+                }
+              }
+          }, {
+              onlyOnce: true 
+          });
+        }
+        $('#highscores-table').append('</tbody>')
+    });
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+
+        // Add active class to the clicked button
+        this.classList.add('active');
+
+        const selectedCategory = this.getAttribute('data-category');
+        categoryHeader.textContent = categories[selectedCategory];
+
+        // Filter and limit to top 25 rows based on selected category
+        const rows = Array.from(table.querySelectorAll('tbody tr'));
+        let count = 0;
+        rows.forEach(row => {
+            const rowCategory = row.getAttribute('data-category');
+            if (rowCategory === selectedCategory) {
+                if (count < topLimit) {
+                    row.style.display = '';
+                    count++;
+                } else {
+                    row.style.display = 'none';
+                }
+            } else {
+                row.style.display = 'none';
+            }
+        });
+      });
+    });
+
+    // Trigger the first button's click to load "Nights" on page load
+    filterButtons[0].click();
+  </script>
+
+</body>
+</html>

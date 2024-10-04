@@ -1,0 +1,96 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+#filter-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.filter-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 0 20px;
+    padding: 0;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.filter-button img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.filter-button span {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+.filter-button:hover img, .filter-button.active img {
+    transform: scale(1.2);
+}
+
+.filter-button.active span {
+    font-weight: bold;
+    font-size: medium;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    color: #333;
+}
+
+th {
+    background-color: #f9f9f9;
+    color: #555;
+}
+
+tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+tr:hover {
+    background-color: #e8e8e8;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #888;
+    font-size: 0.9em;
+}
