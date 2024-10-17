@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NR Physio</title>
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome for Social Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar with Logo and Social Icons -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/physio-NR.png" alt="NR Physio Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">À Propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item social-icons">
+                        <a href="https://www.facebook.com/NR.Physio.Rehab" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/nr_physi0/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/nicolas-rigali-a78854161/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1>Bienvenue chez NR Physio</h1>
+        <p>Améliorez votre bien-être avec des soins de physiothérapie spécialisés.</p>
+        <a href="https://www.gorendezvous.com/recherche/rigali" class="btn btn-custom btn-lg" target="_blank">Prenez Rendez-vous</a>
+    </div>
+
+    <!-- Services Section with Cards -->
+    <div class="container content" id="services">
+        <h2>Services</h2>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card">
+                    <img src="images/placeholder.png" class="card-img-top" alt="Service 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Rééducation physique</h5>
+                        <p class="card-text">Programmes adaptés pour vous aider à retrouver votre mobilité après une blessure.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card">
+                    <img src="images/placeholder.png" class="card-img-top" alt="Service 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Thérapie manuelle</h5>
+                        <p class="card-text">Soulagez les tensions musculaires avec nos traitements de thérapie manuelle personnalisés.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card">
+                    <img src="images/placeholder.png" class="card-img-top" alt="Service 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Traitement musculo-squelettique</h5>
+                        <p class="card-text">Des solutions efficaces pour gérer les douleurs articulaires et musculaires.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card">
+                    <img src="images/placeholder.png" class="card-img-top" alt="Service 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Réhabilitation sportive</h5>
+                        <p class="card-text">Programmes de réhabilitation sportive conçus pour les athlètes en quête de récupération rapide et sûre.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="container content" id="about">
+        <h2>À Propos</h2>
+        <p>
+            <a href="https://www.linkedin.com/in/nicolas-rigali-a78854161/" target="_blank">Nicolas Rigali</a> offre des soins de physiothérapie de haute qualité.
+            Il se concentre sur la gestion de la douleur, la rééducation et l'amélioration de la mobilité.
+        </p>
+        <p>
+            Il a une Maîtrise en physiothérapie et il traite <u>l'arthrite, l'arthrose, les blessures sportives, l'étourdissement, l'hernie discale, les maux de dos, les maux de tête, la posture, les problèmes inflammatoires</u> et plus encore.
+        </p>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container content" id="contact">
+        <h2>Contactez-Moi</h2>
+        <p>
+            Vous avez des questions ou souhaitez prendre rendez-vous ?
+            <br>Email : <a href="mailto:contact@nrphysio.com">contact@nrphysio.com</a>
+            <br>Téléphone : 1-418-999-9999
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 NR Physio. Tous droits réservés.</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Back to Top Button Visibility -->
+    <script>
+        // Show the Back to Top button when the user scrolls down
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (window.scrollY > 100) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
