@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <link rel="icon" type="image/png" href="images/favicon.ico">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -16,47 +18,57 @@
 
     <!-- Header Section -->
     <div class="header">
-        <h1>My Projects</h1>
-        <p>Explore the projects I have been working on.</p>
+        <h1 id="title">My Projects</h1>
+        <p id="subtitle">Explore the projects I have been working on.</p>
+
+        <!-- LinkedIn Icon
+        <a href="https://www.linkedin.com/in/your-profile" target="_blank" class="linkedin-icon">
+            <i class="fab fa-linkedin"></i>
+        </a> -->
+    </div>
+
+    <!-- Translate Button -->
+    <div class="text-center my-3">
+        <button id="translate-btn" class="btn btn-primary" onclick="toggleLanguage()">Français</button>
     </div>
 
     <!-- Categories Section -->
     <div class="container">
-        <h2 class="text-center my-5">Categories</h2>
+        <h2 id="categoriesTitle" class="text-center my-5">Categories</h2>
         <div class="row">
             <!-- Category 1 -->
             <div class="col-md-3">
                 <div class="category-card">
-                    <h3>Games</h3>
-                    <p>Projects that involve creating interactive games.</p>
-                    <a href="#games" class="btn btn-custom">View Projects</a>
+                    <h3 id="cat1Title">Games</h3>
+                    <p id="cat1Desc">Projects that involve creating interactive games.</p>
+                    <a href="#games" id="catButton1" class="btn btn-custom">View Projects</a>
                 </div>
             </div>
 
             <!-- Category 2 -->
             <div class="col-md-3">
                 <div class="category-card">
-                    <h3>Web Apps</h3>
-                    <p>Web apps that utilize modern technologies and APIs.</p>
-                    <a href="#web-apps" class="btn btn-custom">View Projects</a>
+                    <h3 id="cat2Title">Web Apps</h3>
+                    <p id="cat2Desc">Web apps that utilize modern technologies and APIs.</p>
+                    <a href="#webApps" id="catButton2" class="btn btn-custom">View Projects</a>
                 </div>
             </div>
 
             <!-- Category 3 -->
             <div class="col-md-3">
                 <div class="category-card">
-                    <h3>Mobile Apps</h3>
-                    <p>Projects designed for mobile platforms.</p>
-                    <a href="#mobile-apps" class="btn btn-custom">View Projects</a>
+                    <h3 id="cat3Title">Mobile Apps</h3>
+                    <p id="cat3Desc">Projects designed for mobile platforms.</p>
+                    <a href="#mobileApps" id="catButton3" class="btn btn-custom">View Projects</a>
                 </div>
             </div>
 
             <!-- Category 4 -->
             <div class="col-md-3">
                 <div class="category-card">
-                    <h3>Other</h3>
-                    <p>Other projects such as automation or experimentation.</p>
-                    <a href="#others" class="btn btn-custom">View Projects</a>
+                    <h3 id="cat4Title">Other</h3>
+                    <p id="cat4Desc">Other projects such as automation or experimentation.</p>
+                    <a href="#others" id="catButton4" class="btn btn-custom">View Projects</a>
                 </div>
             </div>
         </div>
@@ -71,10 +83,14 @@
                     <img src="images/nightmare-fighter.png" class="card-img-top" alt="Nightmare Fighter">
                     <div class="card-body">
                         <h5 class="card-title">Nightmare Fighter</h5>
-                        <p class="card-text">A 3D "tower" self defense game made with Unity during the Microsoft Hackathon 2024.</p>
-                        <a href="https://nightmarefighter.azurewebsites.net/v1.1.0/" target="_blank" class="btn btn-custom">Play on Web</a>
-                        <a href="https://dpigeon.github.io/nightmare-fighter/highscores/" target="_blank" class="btn btn-custom">Highscores</a>
-                        <a href="https://github.com/DPigeon/My-Portfolio/blob/master/Nightmare-Fighter.md" target="_blank" class="btn btn-custom">View Project</a>
+                        <p id="gamesPrj1Desc" class="card-text">A 3D "tower" self defense game made with Unity during the Microsoft
+                            Hackathon 2024.</p>
+                        <a id="gamesPrj1Button1" href="https://nightmarefighter.azurewebsites.net/v1.1.0/" target="_blank"
+                            class="btn btn-custom">Play on Web</a>
+                        <a id="gamesPrj1Button2" href="https://dpigeon.github.io/nightmare-fighter/highscores/" target="_blank"
+                            class="btn btn-custom">Highscores</a>
+                        <a id="gamesPrj1Button3" href="https://github.com/DPigeon/My-Portfolio/blob/master/Nightmare-Fighter.md"
+                            target="_blank" class="btn btn-custom">View Project</a>
                     </div>
                 </div>
             </div>
@@ -84,9 +100,11 @@
                     <img src="images/stacker.png" class="card-img-top" alt="Stacker">
                     <div class="card-body">
                         <h5 class="card-title">Stacker</h5>
-                        <p class="card-text">A ESP32 WROOM32 arcade game based on Stacker retro game.</p>
-                        <a href="https://www.youtube.com/watch?v=SjYPV-ttLqc" target="_blank" class="btn btn-custom">View Video</a>
-                        <a href="https://github.com/DPigeon/Stacker" target="_blank" class="btn btn-custom">View Project</a>
+                        <p id="gamesPrj2Desc" class="card-text">A ESP32 WROOM32 arcade game based on Stacker retro game.</p>
+                        <a id="gamesPrj2Button1" href="https://www.youtube.com/watch?v=SjYPV-ttLqc" target="_blank"
+                            class="btn btn-custom">View Video</a>
+                        <a id="gamesPrj2Button2" href="https://github.com/DPigeon/Stacker" target="_blank" class="btn btn-custom">View
+                            Project</a>
                     </div>
                 </div>
             </div>
@@ -96,9 +114,11 @@
                     <img src="images/swiss-army-swords.png" class="card-img-top" alt="Swiss Army Swords">
                     <div class="card-body">
                         <h5 class="card-title">Swiss Army Swords</h5>
-                        <p class="card-text">A 2D platformer side scroll adventure game made with Unity.</p>
-                        <a href="https://dpigeon.github.io/swiss-army-swords/" target="_blank" class="btn btn-custom">Play on Web</a>
-                        <a href="https://github.com/DPigeon/Swiss-Army-Swords" target="_blank" class="btn btn-custom">View Project</a>
+                        <p id="gamesPrj3Desc" class="card-text">A 2D platformer side scroll adventure game made with Unity.</p>
+                        <a id="gamesPrj3Button1" href="https://dpigeon.github.io/swiss-army-swords/" target="_blank"
+                            class="btn btn-custom">Play on Web</a>
+                        <a id="gamesPrj3Button2" href="https://github.com/DPigeon/Swiss-Army-Swords" target="_blank"
+                            class="btn btn-custom">View Project</a>
                     </div>
                 </div>
             </div>
@@ -108,9 +128,12 @@
                     <img src="images/golden-sea.png" class="card-img-top" alt="Golden Sea">
                     <div class="card-body">
                         <h5 class="card-title">Golden Sea</h5>
-                        <p class="card-text">A variation of <a href="https://github.com/DPigeon/Golden-Sea">Oxygen Fight</a> that I made before: 3D game made with Unity.</p>
-                        <a href="https://dpigeon.github.io/golden-sea/" target="_blank" class="btn btn-custom">Play on Web</a>
-                        <a href="https://github.com/DPigeon/Golden-Sea" target="_blank" class="btn btn-custom">View Project</a>
+                        <p id="gamesPrj4Desc" class="card-text">A variation of <a href="https://github.com/DPigeon/Golden-Sea">Oxygen
+                                Fight</a> that I made before: 3D game made with Unity.</p>
+                        <a id="gamesPrj4Button1" href="https://dpigeon.github.io/golden-sea/" target="_blank" class="btn btn-custom">Play on
+                            Web</a>
+                        <a id="gamesPrj4Button2" href="https://github.com/DPigeon/Golden-Sea" target="_blank" class="btn btn-custom">View
+                            Project</a>
                     </div>
                 </div>
             </div>
@@ -120,9 +143,11 @@
                     <img src="images/oxygen-fight.png" class="card-img-top" alt="Oxygen Fight">
                     <div class="card-body">
                         <h5 class="card-title">Oxygen Fight</h5>
-                        <p class="card-text">A variation of Balloon Fight: 2D game made with Unity.</p>
-                        <a href="https://dpigeon.github.io/oxygen-fight/" target="_blank" class="btn btn-custom">Play on Web</a>
-                        <a href="https://github.com/DPigeon/Oxygen-Fight" target="_blank" class="btn btn-custom">View Project</a>
+                        <p id="gamesPrj5Desc" class="card-text">A variation of Balloon Fight: 2D game made with Unity.</p>
+                        <a id="gamesPrj5Button1" href="https://dpigeon.github.io/oxygen-fight/" target="_blank" class="btn btn-custom">Play on
+                            Web</a>
+                        <a id="gamesPrj5Button2" href="https://github.com/DPigeon/Oxygen-Fight" target="_blank" class="btn btn-custom">View
+                            Project</a>
                     </div>
                 </div>
             </div>
@@ -132,29 +157,35 @@
                     <img src="images/hetha.png" class="card-img-top" alt="Hetha">
                     <div class="card-body">
                         <h5 class="card-title">Hetha</h5>
-                        <p class="card-text">A small and simple Arduino game where the goal is to escape and survive.</p>
-                        <a href="https://github.com/DPigeon/Hetha/blob/master/README.md" target="_blank" class="btn btn-custom">View Info</a>
-                        <a href="https://github.com/DPigeon/Hetha" target="_blank" class="btn btn-custom">View Project</a>
+                        <p id="gamesPrj6Desc" class="card-text">A small and simple Arduino game where the goal is to escape and survive.
+                        </p>
+                        <a id="gamesPrj6Button1" href="https://github.com/DPigeon/Hetha/blob/master/README.md" target="_blank"
+                            class="btn btn-custom">View Info</a>
+                        <a id="gamesPrj6Button2" href="https://github.com/DPigeon/Hetha" target="_blank" class="btn btn-custom">View
+                            Project</a>
                     </div>
                 </div>
             </div>
 
             <div class="back-to-top">
-                <a href="#top" class="btn btn-custom">Back to Top</a>
+                <a id="backToTop1" href="#top" class="btn btn-custom">Back to Top</a>
             </div>
 
         </div>
 
-        <h2 id="web-apps" class="text-center my-5">Web Apps</h2>
+        <h2 id="webApps" class="text-center my-5">Web Apps</h2>
         <div class="row">
             <div class="col-md-4">
                 <div class="card project-card">
                     <img src="images/money-tree.png" class="card-img-top" alt="MoneyTree">
                     <div class="card-body">
                         <h5 class="card-title">MoneyTree</h5>
-                        <p class="card-text">An Angular & Java web application that encourage good investing practices.</p>
-                        <a href="https://github.com/DPigeon/Money-Tree/wiki" target="_blank" class="btn btn-custom">View Info</a>
-                        <a href="https://github.com/DPigeon/Money-Tree" target="_blank" class="btn btn-custom">View Project</a>
+                        <p id="webPrj1Desc" class="card-text">An Angular & Java web application that encourage good investing practices.
+                        </p>
+                        <a id="webPrj1Button1" href="https://github.com/DPigeon/Money-Tree/wiki" target="_blank" class="btn btn-custom">View
+                            Info</a>
+                        <a id="webPrj1Button2"  href="https://github.com/DPigeon/Money-Tree" target="_blank" class="btn btn-custom">View
+                            Project</a>
                     </div>
                 </div>
             </div>
@@ -164,9 +195,12 @@
                     <img src="images/edge.png" class="card-img-top" alt="Edge">
                     <div class="card-body">
                         <h5 class="card-title">Edge</h5>
-                        <p class="card-text">A React.js social media web app that allows parents to communicate with teachers.</p>
-                        <a href="https://github.com/DPigeon/My-Portfolio/blob/master/Edge-Web-Application.md" target="_blank" class="btn btn-custom">View Info</a>
-                        <a href="https://github.com/DPigeon/Edge" target="_blank" class="btn btn-custom">View Project</a>
+                        <p id="webPrj2Desc" class="card-text">A React.js social media web app that allows parents to communicate with
+                            teachers.</p>
+                        <a id="webPrj2Button1"  href="https://github.com/DPigeon/My-Portfolio/blob/master/Edge-Web-Application.md"
+                            target="_blank" class="btn btn-custom">View Info</a>
+                        <a id="webPrj2Button2"  href="https://github.com/DPigeon/Edge" target="_blank" class="btn btn-custom">View
+                            Project</a>
                     </div>
                 </div>
             </div>
@@ -176,8 +210,10 @@
                     <img src="images/survive-highscores.png" class="card-img-top" alt="Survive Highscores">
                     <div class="card-body">
                         <h5 class="card-title">Survive's Highscores</h5>
-                        <p class="card-text">A React.js highscores page integrated to work with my friend's game Survive.</p>
-                        <a href="https://github.com/DPigeon/My-Portfolio/blob/master/Survive-Game-Highscores-Application.md" target="_blank" class="btn btn-custom">View Project</a>
+                        <p id="webPrj3Desc" class="card-text">A React.js highscores page integrated to work with my friend's game
+                            Survive.</p>
+                        <a id="webPrj3Button1"  href="https://github.com/DPigeon/My-Portfolio/blob/master/Survive-Game-Highscores-Application.md"
+                            target="_blank" class="btn btn-custom">View Project</a>
                     </div>
                 </div>
             </div>
@@ -187,29 +223,35 @@
                     <img src="images/wikiuno.png" class="card-img-top" alt="Wikiuno">
                     <div class="card-body">
                         <h5 class="card-title">Wikiuno</h5>
-                        <p class="card-text">A React.js web application created during ConUHacks IV Hackathon that allows you to see your Arduino outputs.</p>
-                        <a href="https://github.com/DPigeon/Wikiuno/wiki" target="_blank" class="btn btn-custom">View Info</a>
-                        <a href="https://github.com/DPigeon/Wikiuno" target="_blank" class="btn btn-custom">View Project</a>
+                        <p id="webPrj4Desc" class="card-text">A React.js web application created during ConUHacks IV Hackathon that
+                            allows you to see your Arduino outputs.</p>
+                        <a id="webPrj4Button1"  href="https://github.com/DPigeon/Wikiuno/wiki" target="_blank" class="btn btn-custom">View
+                            Info</a>
+                        <a id="webPrj4Button2"  href="https://github.com/DPigeon/Wikiuno" target="_blank" class="btn btn-custom">View
+                            Project</a>
                     </div>
                 </div>
             </div>
 
             <div class="back-to-top">
-                <a href="#top" class="btn btn-custom">Back to Top</a>
+                <a id="backToTop2" href="#top" class="btn btn-custom">Back to Top</a>
             </div>
 
         </div>
 
-        <h2 id="mobile-apps" class="text-center my-5">Mobile Apps</h2>
+        <h2 id="mobileApps" class="text-center my-5">Mobile Apps</h2>
         <div class="row">
             <div class="col-md-4">
                 <div class="card project-card">
                     <img src="images/see-text.png" class="card-img-top" alt="SeeText">
                     <div class="card-body">
                         <h5 class="card-title">SeeText</h5>
-                        <p class="card-text">An Android app that shows you what you say & detects objects in different languages.</p>
-                        <a href="https://github.com/DPigeon/My-Portfolio/blob/master/SeeText.md" target="_blank" class="btn btn-custom">View Info</a>
-                        <a href="https://github.com/DPigeon/SeeText" target="_blank" class="btn btn-custom">View Project</a>
+                        <p id="mobilePrj1Desc" class="card-text">An Android app that shows you what you say & detects objects in different
+                            languages.</p>
+                        <a id="mobilePrj1Button1" href="https://github.com/DPigeon/My-Portfolio/blob/master/SeeText.md" target="_blank"
+                            class="btn btn-custom">View Info</a>
+                        <a id="mobilePrj1Button2" href="https://github.com/DPigeon/SeeText" target="_blank" class="btn btn-custom">View
+                            Project</a>
                     </div>
                 </div>
             </div>
@@ -219,9 +261,12 @@
                     <img src="images/uvxpo.png" class="card-img-top" alt="UVXpo">
                     <div class="card-body">
                         <h5 class="card-title">UVXpo</h5>
-                        <p class="card-text">An Android application that is used to track your UV exposure throughout the day.</p>
-                        <a href="https://github.com/DPigeon/My-Portfolio/blob/master/Edge-Web-Application.md" target="_blank" class="btn btn-custom">View Info</a>
-                        <a href="https://github.com/DPigeon/UVXpo" target="_blank" class="btn btn-custom">View Project</a>
+                        <p id="mobilePrj2Desc" class="card-text">An Android application that is used to track your UV exposure throughout
+                            the day.</p>
+                        <a id="mobilePrj2Button1" href="https://github.com/DPigeon/My-Portfolio/blob/master/Edge-Web-Application.md"
+                            target="_blank" class="btn btn-custom">View Info</a>
+                        <a id="mobilePrj2Button2" href="https://github.com/DPigeon/UVXpo" target="_blank" class="btn btn-custom">View
+                            Project</a>
                     </div>
                 </div>
             </div>
@@ -231,9 +276,12 @@
                     <img src="images/headwarn.png" class="card-img-top" alt="HeadWarn">
                     <div class="card-body">
                         <h5 class="card-title">HeadWarn</h5>
-                        <p class="card-text">An app built during ImplementAI 2019 that analyzes if you are tired or drunk before driving.</p>
-                        <a href="https://github.com/DPigeon/HeadWarn/wiki/Demo" target="_blank" class="btn btn-custom">View Info</a>
-                        <a href="https://github.com/DPigeon/HeadWarn" target="_blank" class="btn btn-custom">View Project</a>
+                        <p id="mobilePrj3Desc" class="card-text">An app built during ImplementAI 2019 that analyzes if you are tired or
+                            drunk before driving.</p>
+                        <a id="mobilePrj3Button1" href="https://github.com/DPigeon/HeadWarn/wiki/Demo" target="_blank"
+                            class="btn btn-custom">View Info</a>
+                        <a id="mobilePrj3Button2" href="https://github.com/DPigeon/HeadWarn" target="_blank" class="btn btn-custom">View
+                            Project</a>
                     </div>
                 </div>
             </div>
@@ -243,15 +291,18 @@
                     <img src="images/xetha.png" class="card-img-top" alt="Xetha">
                     <div class="card-body">
                         <h5 class="card-title">Xetha</h5>
-                        <p class="card-text">React-Native mobile game application created to solve fun and interactive puzzles.</p>
-                        <a href="https://github.com/DPigeon/My-Portfolio/blob/master/Xetha-Game-Mobile-Application.md" target="_blank" class="btn btn-custom">View Info</a>
-                        <a href="https://github.com/DPigeon/Xetha" target="_blank" class="btn btn-custom">View Project</a>
+                        <p id="mobilePrj4Desc" class="card-text">React-Native mobile game application created to solve fun and interactive
+                            puzzles.</p>
+                        <a id="mobilePrj4Button1" href="https://github.com/DPigeon/My-Portfolio/blob/master/Xetha-Game-Mobile-Application.md"
+                            target="_blank" class="btn btn-custom">View Info</a>
+                        <a id="mobilePrj4Button2" href="https://github.com/DPigeon/Xetha" target="_blank" class="btn btn-custom">View
+                            Project</a>
                     </div>
                 </div>
             </div>
 
             <div class="back-to-top">
-                <a href="#top" class="btn btn-custom">Back to Top</a>
+                <a id="backToTop3" href="#top" class="btn btn-custom">Back to Top</a>
             </div>
 
         </div>
@@ -263,9 +314,13 @@
                     <img src="images/smash-remix.jpg" class="card-img-top" alt="SmashRemix">
                     <div class="card-body">
                         <h5 class="card-title">SmashRemix Automation</h5>
-                        <p class="card-text">Proposed improvements to the <a href="https://github.com/JSsixtyfour/smashremix">SR Community</a> using GitHub Actions & shell scripts.</p>
-                        <a href="https://github.com/DPigeon/smashremix/pull/1" target="_blank" class="btn btn-custom">Enhancement</a>
-                        <a href="https://github.com/DPigeon/smashremix/pull/2" target="_blank" class="btn btn-custom">Release Process</a>
+                        <p id="othersPrj1Desc" class="card-text">Proposed improvements to the <a
+                                href="https://github.com/JSsixtyfour/smashremix">SR Community</a> using GitHub Actions &
+                            shell scripts.</p>
+                        <a id="othersPrj1Button1" href="https://github.com/DPigeon/smashremix/pull/1" target="_blank"
+                            class="btn btn-custom">Enhancement</a>
+                        <a id="othersPrj1Button2" href="https://github.com/DPigeon/smashremix/pull/2" target="_blank"
+                            class="btn btn-custom">Release Process</a>
                     </div>
                 </div>
             </div>
@@ -275,21 +330,28 @@
                     <img src="images/nlp-language-classifier.png" class="card-img-top" alt="NLP Language Classifier">
                     <div class="card-body">
                         <h5 class="card-title">NLP Language Classifier</h5>
-                        <p class="card-text">A Naive Bayes classification to determine the most likely language of a tweet.</p>
-                        <a href="https://github.com/DPigeon/NLP-Language-Classifier/blob/master/README.md" target="_blank" class="btn btn-custom">View Info</a>
-                        <a href="https://github.com/DPigeon/NLP-Language-Classifier" target="_blank" class="btn btn-custom">View Project</a>
+                        <p id="othersPrj2Desc"  class="card-text">A Naive Bayes classification to determine the most likely language of a
+                            tweet.</p>
+                        <a id="othersPrj2Button1" href="https://github.com/DPigeon/NLP-Language-Classifier/blob/master/README.md"
+                            target="_blank" class="btn btn-custom">View Info</a>
+                        <a id="othersPrj2Button2" href="https://github.com/DPigeon/NLP-Language-Classifier" target="_blank"
+                            class="btn btn-custom">View Project</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="card project-card">
-                    <img src="images/heuristic-indonesian-dot-puzzle.png" class="card-img-top" alt="Heuristic Indonesian Dot Puzzle">
+                    <img src="images/heuristic-indonesian-dot-puzzle.png" class="card-img-top"
+                        alt="Heuristic Indonesian Dot Puzzle">
                     <div class="card-body">
                         <h5 class="card-title">Heuristic Indonesian Dot Puzzle</h5>
-                        <p class="card-text">Finds the optimal path with DFS, BFS and A* Algorithm in an indonesian dot puzzle.</p>
-                        <a href="https://github.com/DPigeon/Heuristic-Indonesian-Puzzle/blob/master/README.md" target="_blank" class="btn btn-custom">View Info</a>
-                        <a href="https://github.com/DPigeon/Heuristic-Indonesian-Puzzle" target="_blank" class="btn btn-custom">View Project</a>
+                        <p id="othersPrj3Desc"  class="card-text">Finds the optimal path with DFS, BFS and A* Algorithm in an indonesian dot
+                            puzzle.</p>
+                        <a id="othersPrj3Button1" href="https://github.com/DPigeon/Heuristic-Indonesian-Puzzle/blob/master/README.md"
+                            target="_blank" class="btn btn-custom">View Info</a>
+                        <a id="othersPrj3Button2" href="https://github.com/DPigeon/Heuristic-Indonesian-Puzzle" target="_blank"
+                            class="btn btn-custom">View Project</a>
                     </div>
                 </div>
             </div>
@@ -299,15 +361,18 @@
                     <img src="images/area51.png" class="card-img-top" alt="Area51">
                     <div class="card-body">
                         <h5 class="card-title">Area51</h5>
-                        <p class="card-text">A rollercoaster simulation in space created to experiment with OpenGL stack.</p>
-                        <a href="https://github.com/DPigeon/Area51/wiki" target="_blank" class="btn btn-custom">View Info</a>
-                        <a href="https://github.com/DPigeon/Area51" target="_blank" class="btn btn-custom">View Project</a>
+                        <p id="othersPrj4Desc" class="card-text">A rollercoaster simulation in space created to experiment with OpenGL
+                            stack.</p>
+                        <a id="othersPrj4Button1" href="https://github.com/DPigeon/Area51/wiki" target="_blank" class="btn btn-custom">View
+                            Info</a>
+                        <a id="othersPrj4Button2" href="https://github.com/DPigeon/Area51" target="_blank" class="btn btn-custom">View
+                            Project</a>
                     </div>
                 </div>
             </div>
 
             <div class="back-to-top">
-                <a href="#top" class="btn btn-custom">Back to Top</a>
+                <a id="backToTop4" href="#top" class="btn btn-custom">Back to Top</a>
             </div>
 
             <br>
@@ -318,12 +383,219 @@
 
     <!-- Footer Section -->
     <div class="footer">
-        <p><a href="https://www.flaticon.com/free-icons/programmer" title="programmer icons">Programmer icons created by Freepik - Flaticon</a></p>
+        <p><a href="https://www.flaticon.com/free-icons/programmer" title="programmer icons">Programmer icons created by
+                Freepik - Flaticon</a></p>
         <p>&copy; 2024 My Projects | <a href="https://github.com/DPigeon/" target="_blank">DPigeon</a></p>
     </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script>
+        const en = 'en'
+        const fr = 'fr'
+        let currentLanguage = en
+        const content = {
+            en: {
+                title: "My Projects",
+                subtitle: "Explore the projects I have been working on.",
+
+                categoriesTitle: "Categories",
+                cat1Title: "Games",
+                cat1Desc: "Projects that involve creating interactive games.",
+                catButton1: "View Projects",
+                cat2Title: "Web Apps",
+                cat2Desc: "Web apps that utilize modern technologies and APIs.",
+                catButton2: "View Projects",
+                cat3Title: "Mobile Apps",
+                cat3Desc: "Projects designed for mobile platforms.",
+                catButton3: "View Projects",
+                cat4Title: "Others",
+                cat4Desc: "Other projects such as automation or experimentation.",
+                catButton4: "View Projects",
+
+                games: "Games",
+                gamesPrj1Desc: "A 3D 'tower' self defense game made with Unity during the Microsoft Hackathon 2024.",
+                gamesPrj1Button1: "Play on Web",
+                gamesPrj1Button2: "Highscores",
+                gamesPrj1Button3: "View Project",
+                gamesPrj2Desc: "A ESP32 WROOM32 arcade game based on Stacker retro game.",
+                gamesPrj2Button1: "View Video",
+                gamesPrj2Button2: "View Project",
+                gamesPrj3Desc: "A 2D platformer side scroll adventure game made with Unity.",
+                gamesPrj3Button1: "Play on Web",
+                gamesPrj3Button2: "View Project",
+                gamesPrj4Desc: "A variation of Oxygen Fight that I made before: 3D game made with Unity.",
+                gamesPrj4Button1: "Play on Web",
+                gamesPrj4Button2: "View Project",
+                gamesPrj5Desc: "A variation of Balloon Fight: 2D game made with Unity.",
+                gamesPrj5Button1: "View Video",
+                gamesPrj5Button2: "View Project",
+                gamesPrj6Desc: "A small and simple Arduino game where the goal is to escape and survive.",
+                gamesPrj6Button1: "View Info",
+                gamesPrj6Button2: "View Project",
+
+                webApps: "Web Apps",
+                webPrj1Desc: "An Angular & Java web application that encourage good investing practices.",
+                webPrj1Button1: "View Info",
+                webPrj1Button2: "View Project",
+                webPrj2Desc: "A React.js social media web app that allows parents to communicate with teachers.",
+                webPrj2Button1: "View Info",
+                webPrj2Button2: "View Project",
+                webPrj3Desc: "A React.js highscores page integrated to work with my friend's game Survive.",
+                webPrj3Button1: "View Info",
+                webPrj4Desc: "A React.js web application created during ConUHacks IV Hackathon that allows you to see your Arduino outputs.",
+                webPrj4Button1: "View Info",
+                webPrj4Button2: "View Project",
+
+                mobileApps: "Mobile Apps",
+                mobilePrj1Desc: "An Android app that shows you what you say & detects objects in different languages.",
+                mobilePrj1Button1: "View Info",
+                mobilePrj1Button2: "View Project",
+                mobilePrj2Desc: "An Android application that is used to track your UV exposure throughout the day.",
+                mobilePrj2Button1: "View Info",
+                mobilePrj2Button2: "View Project",
+                mobilePrj3Desc: "An app built during ImplementAI 2019 that analyzes if you are tired or drunk before driving.",
+                mobilePrj3Button1: "View Info",
+                mobilePrj3Button2: "View Project",
+                mobilePrj4Desc: "React-Native mobile game application created to solve fun and interactive puzzles.",
+                mobilePrj4Button1: "View Info",
+                mobilePrj4Button2: "View Project",
+
+                others: "Others",
+                othersPrj1Desc: "Proposed improvements to the SR Community using GitHub Actions & shell scripts.",
+                othersPrj1Button1: "Enhancement",
+                othersPrj1Button2: "Release Process",
+                othersPrj2Desc: "A Naive Bayes classification to determine the most likely language of a tweet.",
+                othersPrj2Button1: "View Info",
+                othersPrj2Button2: "View Project",
+                othersPrj3Desc: "Finds the optimal path with DFS, BFS and A* Algorithm in an indonesian dot puzzle.",
+                othersPrj3Button1: "View Info",
+                othersPrj3Button2: "View Project",
+                othersPrj4Desc: "A rollercoaster simulation in space created to experiment with OpenGL stack.",
+                othersPrj4Button1: "View Info",
+                othersPrj4Button2: "View Project",
+
+                backToTop1: "Back to Top",
+                backToTop2: "Back to Top",
+                backToTop3: "Back to Top",
+                backToTop4: "Back to Top"
+            },
+            fr: {
+                title: "Mes Projets",
+                subtitle: "Explorez les projets sur lesquels j'ai travaillé.",
+
+                categoriesTitle: "Catégories",
+                cat1Title: "Jeux",
+                cat1Desc: "Projets qui impliquent la création de jeux interactifs.",
+                catButton1: "Voir les projets",
+                cat2Title: "Applications Web",
+                cat2Desc: "Applications Web utilisant des technologies et des API modernes.",
+                catButton2: "Voir les projets",
+                cat3Title: "Applications Mobiles",
+                cat3Desc: "Projets conçus pour les plateformes mobiles.",
+                catButton3: "Voir les projets",
+                cat4Title: "Autres",
+                cat4Desc: "Autres projets comme l'automatisation ou l'expérimentation.",
+                catButton4: "Voir les projets",
+
+                games: "Jeux",
+                gamesPrj1Desc: "Un jeu d'autodéfense 'tour' 3D réalisé avec Unity lors du Microsoft Hackathon 2024.",
+                gamesPrj1Button1: "Jouer sur Web",
+                gamesPrj1Button2: "Scores",
+                gamesPrj1Button3: "Voir le projet",
+                gamesPrj2Desc: "Un jeu d'arcade ESP32 WROOM32 basé sur le jeu rétro Stacker.",
+                gamesPrj2Button1: "Voir la vidéo",
+                gamesPrj2Button2: "Voir le projet",
+                gamesPrj3Desc: "Un jeu d'aventure et de plateforme 2D à défilement latéral réalisé avec Unity.",
+                gamesPrj3Button1: "Jour sur Web",
+                gamesPrj3Button2: "Voir le projet",
+                gamesPrj4Desc: "Une variante d'Oxygen Fight que j'ai déjà créé : un jeu 3D réalisé avec Unity.",
+                gamesPrj4Button1: "Jouer sur Web",
+                gamesPrj4Button2: "Voir le projet",
+                gamesPrj5Desc: "Une variante de Balloon Fight : jeu 2D réalisé avec Unity.",
+                gamesPrj5Button1: "Voir la vidéo",
+                gamesPrj5Button2: "Voir le projet",
+                gamesPrj6Desc: "Un petit et simple jeu Arduino où le but est de s'échapper et de survivre.",
+                gamesPrj6Button1: "Voir les infos",
+                gamesPrj6Button2: "Voir le projet",
+
+                webApps: "Applications Web",
+                webPrj1Desc: "Une app web Angular & Java qui encourage les bonnes pratiques d'investissement.",
+                webPrj1Button1: "Voir les infos",
+                webPrj1Button2: "Voir le projet",
+                webPrj2Desc: "Une app Web de médias sociaux React.js qui permet aux parents de communiquer avec les enseignants.",
+                webPrj2Button1: "Voir les infos",
+                webPrj2Button2: "Voir le projet",
+                webPrj3Desc: "Une page des meilleurs scores React.js intégrée pour fonctionner avec le jeu Survive de mon ami.",
+                webPrj3Button1: "Voir le projet",
+                webPrj4Desc: "Une app web React.js créée lors du ConUHacks IV Hackathon qui vous permet de voir vos sorties Arduino.",
+                webPrj4Button1: "Voir les infos",
+                webPrj4Button2: "Voir le projet",
+
+                mobileApps: "Applications Mobiles",
+                mobilePrj1Desc: "Une app Android qui vous montre ce que vous dites et détecte les objets dans différentes langues.",
+                mobilePrj1Button1: "Voir les infos",
+                mobilePrj1Button2: "Voir le projet",
+                mobilePrj2Desc: "Une app Android qui permet de suivre votre exposition aux UV tout au long de la journée.",
+                mobilePrj2Button1: "Voir les infos",
+                mobilePrj2Button2: "Voir le projet",
+                mobilePrj3Desc: "Une app créée lors de ImplementAI 2019 qui analyse si vous êtes fatigué ou ivre avant de conduire.",
+                mobilePrj3Button1: "Voir les infos",
+                mobilePrj3Button2: "Voir le projet",
+                mobilePrj4Desc: "App de jeu mobile React-Native créée pour résoudre des énigmes amusantes et interactives.",
+                mobilePrj4Button1: "Voir les infos",
+                mobilePrj4Button2: "Voir le projet",
+
+                others: "Autres",
+                othersPrj1Desc: "Améliorations proposées à la communauté SR à l'aide des actions GitHub et des scripts shell.",
+                othersPrj1Button1: "Amélioration",
+                othersPrj1Button2: "Processus de déploiement",
+                othersPrj2Desc: "Une classification Naive Bayes pour déterminer la langue la plus probable d'un tweet.",
+                othersPrj2Button1: "Voir les infos",
+                othersPrj2Button2: "Voir le projet",
+                othersPrj3Desc: "Trouve le chemin optimal avec les algorithmes DFS, BFS et A* dans un puzzle de points indonésien.",
+                othersPrj3Button1: "Voir les infos",
+                othersPrj3Button2: "Voir le projet",
+                othersPrj4Desc: "Une simulation de montagnes russes dans l'espace créée avec OpenGL.",
+                othersPrj4Button1: "Voir les infos",
+                othersPrj4Button2: "Voir le projet",
+
+                backToTop1: "Retour en haut",
+                backToTop2: "Retour en haut",
+                backToTop3: "Retour en haut",
+                backToTop4: "Retour en haut"
+            }
+        };
+        const idList = getAllIds()
+
+        function toggleLanguage() {
+            const newLang = currentLanguage === en ? fr : en
+
+            for (let i = 0; i < idList.length; i++) {
+                const id = idList[i]
+                document.getElementById(id).innerText = content[newLang][id]
+            }
+
+            currentLanguage = newLang
+            document.getElementById('translate-btn').innerText = currentLanguage === en ? 'Français' : 'English'
+        }
+
+        function getAllIds() {
+            const allElements = document.querySelectorAll('*') 
+            const ids = []
+
+            allElements.forEach(element => {
+                if (element.id) {
+                    ids.push(element.id)
+                }
+            })
+
+            return ids
+        }
+
+    </script>
+
 </body>
+
 </html>
