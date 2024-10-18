@@ -16,6 +16,7 @@ body {
     animation: fadeIn 1s ease-out;
 }
 .header {
+    position: relative;
     text-align: center;
     padding: 0px 0;
     background-color: #333;
@@ -25,6 +26,16 @@ body {
 .header h1 {
     font-size: 3rem;
     font-weight: 600;
+}
+.linkedin-icon {
+    position: absolute;
+    top: 15px; /* Align it vertically with the button */
+    right: 10px; /* Distance from the right side of the header */
+    font-size: 24px; /* Icon size */
+    color: #0077b5; /* LinkedIn blue color */
+}
+.linkedin-icon:hover {
+    color: #005582; /* Darker shade on hover */
 }
 .header p {
     font-size: 1.25rem;
@@ -90,5 +101,5 @@ body {
     color: #bbbbbb;
 }
 .container {
-    padding-top: 5px;
+    padding-top: 0px;
 }
