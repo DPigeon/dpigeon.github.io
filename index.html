@@ -166,11 +166,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="back-to-top">
-                <a id="backToTop1" href="#top" class="btn btn-custom">Back to Top</a>
-            </div>
-
         </div>
 
         <h2 id="webApps" class="text-center my-5">Web Apps</h2>
@@ -232,11 +227,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="back-to-top">
-                <a id="backToTop2" href="#top" class="btn btn-custom">Back to Top</a>
-            </div>
-
         </div>
 
         <h2 id="mobileApps" class="text-center my-5">Mobile Apps</h2>
@@ -300,11 +290,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="back-to-top">
-                <a id="backToTop3" href="#top" class="btn btn-custom">Back to Top</a>
-            </div>
-
         </div>
 
         <h2 id="others" class="text-center my-5">Others</h2>
@@ -370,11 +355,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="back-to-top">
-                <a id="backToTop4" href="#top" class="btn btn-custom">Back to Top</a>
-            </div>
-
             <br>
             <br>
 
@@ -388,10 +368,22 @@
         <p>&copy; 2024 My Projects | <a href="https://github.com/DPigeon/" target="_blank">DPigeon</a></p>
     </div>
 
+    <!-- Back to Top Button -->
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
+        // Show the Back to Top button when the user scrolls down
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (window.scrollY > 100) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
         const en = 'en'
         const fr = 'fr'
         let currentLanguage = en
@@ -474,12 +466,7 @@
                 othersPrj3Button2: "View Project",
                 othersPrj4Desc: "A rollercoaster simulation in space created to experiment with OpenGL stack.",
                 othersPrj4Button1: "View Info",
-                othersPrj4Button2: "View Project",
-
-                backToTop1: "Back to Top",
-                backToTop2: "Back to Top",
-                backToTop3: "Back to Top",
-                backToTop4: "Back to Top"
+                othersPrj4Button2: "View Project"
             },
             fr: {
                 title: "Mes Projets",
@@ -559,12 +546,7 @@
                 othersPrj3Button2: "Voir le projet",
                 othersPrj4Desc: "Une simulation de montagnes russes dans l'espace créée avec OpenGL.",
                 othersPrj4Button1: "Voir les infos",
-                othersPrj4Button2: "Voir le projet",
-
-                backToTop1: "Retour en haut",
-                backToTop2: "Retour en haut",
-                backToTop3: "Retour en haut",
-                backToTop4: "Retour en haut"
+                othersPrj4Button2: "Voir le projet"
             }
         };
         const idList = getAllIds()
