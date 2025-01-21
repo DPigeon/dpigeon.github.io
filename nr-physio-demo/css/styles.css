@@ -49,6 +49,17 @@ body {
     color: var(--secondary-color);
 }
 
+.text-block {
+    display: block;
+    text-align: left;
+    margin-bottom: 20px; /* Space between paragraphs */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Hero Section */
 .hero-section {
     background-color: #f0f8ff;
@@ -58,9 +69,24 @@ body {
     animation: fadeIn 2s ease-in;
 }
 
+.hero-section p {
+    color: var(--nav-bg-color);
+}
+
+.hero-img {
+  background-image: linear-gradient(rgba(18, 11, 11, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero.png");
+
+  height: 50%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
 .hero-section h1 {
     font-size: 2.5rem;
-    color: var(--nav-text-color);
+    color: var(--primary-color);
     animation: slideInDown 1s ease-in-out;
 }
 
@@ -83,11 +109,41 @@ body {
     background-color: var(--secondary-color);
 }
 
-/* Services Section */
+.local-img {
+    width: 600px;
+    height: 600px;
+    object-fit: cover; 
+    border-radius: 400px;
+}
+
+#conditions ul,
+#expertises ul,
+#mission ul {
+    text-align: left;
+    list-style-position: inside;
+    padding-left: 20px;
+}
+
 .content {
     padding: 50px 15px;
     text-align: center;
     animation: fadeInUp 1.5s ease-in-out;
+}
+
+.card-review {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-review:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-review img {
+    width: 600px; 
+    height: 350px;
+    border-radius: 50px;
 }
 
 .card {
@@ -98,6 +154,25 @@ body {
 .card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 300px; 
+    height: 200px; 
+    border-radius: 20px;
+}
+
+.carousel-item img {
+    width: 400px;
+    height: 600px;
+    object-fit: cover; 
+    margin: 0 auto; 
+    border-radius: 75px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
 }
 
 /* Back to Top Button */
